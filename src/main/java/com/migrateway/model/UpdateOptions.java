@@ -16,24 +16,20 @@ import lombok.NoArgsConstructor;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class WriteOptions {
-	
+public class UpdateOptions {
+
 	@JsonProperty("singleUrl")
-	private String singleUrl;
+	private String singleUrl; 
 	
 	@JsonProperty("method")
 	private String method;
 	
+	@JsonProperty("singleBodyType")
+	private String singleBodyType;
+	
 	@JsonProperty("multiBody")
 	private String multiBody;
 	
-	@JsonProperty("multiUrl")
-	private String multiUrl;
-	
-	@JsonProperty("writeOptions")
-	MultiWriteOptions writeOptions = new MultiWriteOptions();
-	
 	@JsonIgnore
 	private Map<String, Object> additionalProperties = new HashMap<String, Object>();
-	
 }

@@ -16,24 +16,25 @@ import lombok.NoArgsConstructor;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class WriteOptions {
-	
+public class DeleteOptions {
+
 	@JsonProperty("singleUrl")
 	private String singleUrl;
 	
 	@JsonProperty("method")
 	private String method;
 	
+	//can be url, query, header, body 
+	@JsonProperty("idLocation")
+	private String idLocation;
+	
+	//{{value}} for url, else key name to use in query, header , body
+	@JsonProperty("idKey")
+	private String idKey;
+	
 	@JsonProperty("multiBody")
 	private String multiBody;
 	
-	@JsonProperty("multiUrl")
-	private String multiUrl;
-	
-	@JsonProperty("writeOptions")
-	MultiWriteOptions writeOptions = new MultiWriteOptions();
-	
 	@JsonIgnore
 	private Map<String, Object> additionalProperties = new HashMap<String, Object>();
-	
 }

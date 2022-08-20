@@ -1,7 +1,11 @@
 package com.migrateway.model;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.persistence.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.AllArgsConstructor;
@@ -26,5 +30,8 @@ public class MultiReadOptions {
 	private String searchfield;
 	@JsonProperty("searchkeyword")
 	private String searchkeyword;
+	
+	@JsonIgnore
+	private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 	
 }

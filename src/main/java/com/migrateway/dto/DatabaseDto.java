@@ -1,34 +1,26 @@
-package com.migrateway.model;
+package com.migrateway.dto;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.persistence.Entity;
-
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.migrateway.model.DeleteOptions;
+import com.migrateway.model.ReadOptions;
+import com.migrateway.model.UpdateOptions;
+import com.migrateway.model.WriteOptions;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Entity
-@Document(collection = "databases")
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class Database {
-	
-	@Id
-	private Integer id;
+@AllArgsConstructor
+@Getter
+@Setter
+public class DatabaseDto {
 	
 	@JsonProperty("name")
 	private String name;
-	
-	@JsonProperty("baseUrl")
-	private String baseUrl;
 	
 	@JsonProperty("healthCheck")
 	private String healthCheck;
@@ -48,10 +40,4 @@ public class Database {
 	@JsonProperty("deleteOptions")
 	DeleteOptions deleteOptions = new DeleteOptions();
 	
-	@JsonIgnore
-	private Map<String, Object> additionalProperties = new HashMap<String, Object>();
-	
-};
-
-
-	
+}
