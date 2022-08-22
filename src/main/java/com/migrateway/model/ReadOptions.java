@@ -35,6 +35,9 @@ public class ReadOptions {
 	@JsonProperty("paginated")
 	private boolean paginated;
 	
+	@JsonProperty("maxPageSize")
+	private boolean maxPageSize;
+	
 	@JsonProperty("multiUrl")
 	private String multiUrl;
 	

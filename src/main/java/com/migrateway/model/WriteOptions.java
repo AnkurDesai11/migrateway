@@ -24,8 +24,11 @@ public class WriteOptions {
 	@JsonProperty("method")
 	private String method;
 	
-	@JsonProperty("multiBody")
-	private String multiBody;
+	@JsonProperty("paginated")
+	private boolean paginated;
+	
+	@JsonProperty("maxPageSize")
+	private boolean maxPageSize;
 	
 	@JsonProperty("multiUrl")
 	private String multiUrl;
