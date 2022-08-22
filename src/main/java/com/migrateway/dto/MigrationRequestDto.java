@@ -36,9 +36,10 @@ public class MigrationRequestDto {
 	@JsonProperty("toMigrate")
 	private ArrayList<String> toMigrate;
 	
-	@JsonProperty("pagination")
-	private int pagination;
+	@JsonProperty("pageSize")
+	private int pageSize;
 	
-	
+	@JsonProperty("forcePagination")
+	private boolean forcePagination;
 	
 }

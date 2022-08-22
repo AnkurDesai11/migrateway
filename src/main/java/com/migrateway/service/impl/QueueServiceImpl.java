@@ -30,7 +30,7 @@ public class QueueServiceImpl implements QueueService{
 	}
 
 	@Override
-	public boolean isinQueue(OperationsQueue queue, String queueClass, String dbName) {
+	public boolean isInQueue(OperationsQueue queue, String queueClass, String dbName) {
 		if (queueClass.equals(AppConstants.READ_QUEUE))
 			return queue.getReadQueue().contains(dbName);
 		else
