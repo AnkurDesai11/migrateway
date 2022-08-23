@@ -25,4 +25,26 @@ public class DatabaseServiceImpl implements DatabaseService{
 		return this.databaseRepository.findAll();
 	}
 
+	@Override
+	public int checkPaginateRead(Database database, int pageSize) {
+		if(database.getReadOptions().isPaginated()) {
+			if(database.getReadOptions().getMaxPageSize() >= pageSize)
+				return pageSize;
+			else
+				return database.getReadOptions().getMaxPageSize();
+		}
+		return -1;
+	}
+	
+	@Override
+	public int checkPaginateWrite(Database database, int pageSize) {
+		if(database.getWriteOptions().isPaginated()) {
+			if(database.getWriteOptions().getMaxPageSize() >= pageSize)
+				return pageSize;
+			else
+				return database.getWriteOptions().getMaxPageSize();
+		}
+		return -1;
+	}
+
 }
