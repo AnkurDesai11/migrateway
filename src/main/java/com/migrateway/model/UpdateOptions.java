@@ -27,8 +27,14 @@ public class UpdateOptions {
 	@JsonProperty("singleBodyType")
 	private String singleBodyType;
 	
-	@JsonProperty("multiBody")
-	private String multiBody;
+	@JsonProperty("paginated")
+	private boolean paginated;
+	
+	@JsonProperty("paginationType")
+	private String paginationType;
+	
+	@JsonProperty("multiUrl")
+	private String multiUrl;
 	
 	@JsonIgnore
 	private Map<String, Object> additionalProperties = new HashMap<String, Object>();

@@ -27,8 +27,11 @@ public class WriteOptions {
 	@JsonProperty("paginated")
 	private boolean paginated;
 	
+	@JsonProperty("paginationType")
+	private String paginationType;
+	
 	@JsonProperty("maxPageSize")
-	private boolean maxPageSize;
+	private int maxPageSize;
 	
 	@JsonProperty("multiUrl")
 	private String multiUrl;
