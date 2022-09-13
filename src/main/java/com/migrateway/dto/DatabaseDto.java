@@ -1,5 +1,7 @@
 package com.migrateway.dto;
 
+import javax.validation.constraints.NotEmpty;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.migrateway.model.DeleteOptions;
 import com.migrateway.model.ReadOptions;
@@ -19,12 +21,14 @@ import lombok.Setter;
 @Setter
 public class DatabaseDto {
 	
+	@NotEmpty(message = "Database name not specified")
 	@JsonProperty("name")
 	private String name;
 	
 	@JsonProperty("healthCheck")
 	private String healthCheck;
 	
+	@NotEmpty(message = "Mask url not specified")
 	@JsonProperty("mask")
 	private String mask;
 	

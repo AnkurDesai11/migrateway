@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.migrateway.model.Database;
 import com.migrateway.repo.DatabaseRepository;
 import com.migrateway.service.DatabaseService;
+import com.migrateway.util.DatabaseNotFoundException;
 
 @Service
 public class DatabaseServiceImpl implements DatabaseService{

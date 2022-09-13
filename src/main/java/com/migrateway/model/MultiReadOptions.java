@@ -30,6 +30,10 @@ public class MultiReadOptions {
 	private String searchfield;
 	@JsonProperty("searchkeyword")
 	private String searchkeyword;
+	@JsonProperty("responsePageNumber")
+	private String responsePageNumber;
+	@JsonProperty("responseIsLastPage")
+	private String responseIsLastPage;
 	
 	@JsonIgnore
 	private Map<String, Object> additionalProperties = new HashMap<String, Object>();
