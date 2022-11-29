@@ -12,21 +12,27 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Document(collection = "logs")
+@Document(collection = "migrations")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Log {
-
-	@Id
-	private String id;
+public class Migration {
 	
+	@Id
 	private String migrationId;
 	
-	private String type;
+	private String source;
 	
-	private LocalDateTime timestamp;
+	private String destination;
 	
-	private String message;
+	private LocalDateTime startTimestamp;
+	
+	private LocalDateTime endTimestamp;
+	
+	private Integer totalProcessed;
+	
+	private Integer succeeded;
+	
+	private Integer failed;
 	
 }

@@ -1,6 +1,7 @@
 package com.migrateway.model;
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Queue;
 
 import javax.persistence.Entity;
 
@@ -22,8 +23,6 @@ public class OperationsQueue {
 	
 	private int currentQueueSize;
 	
-	private ArrayList<String> readQueue;
-	
-	private ArrayList<String> writeQueue;
+	private Queue<HashMap<String, String>> queueValues;
 	
 }

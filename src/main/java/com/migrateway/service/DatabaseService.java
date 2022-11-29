@@ -14,4 +14,6 @@ public interface DatabaseService {
 	
 	public int checkPaginateWrite(Database database, int pageSize);
 	
+	
+	
 }

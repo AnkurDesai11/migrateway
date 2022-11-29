@@ -1,5 +1,7 @@
 package com.migrateway.model;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.Entity;
 
 import org.springframework.data.annotation.Id;
@@ -30,5 +32,7 @@ public class Transaction {
 	private String outcome;
 	
 	private String info;
+	
+	private LocalDateTime timestamp;
 	
 }

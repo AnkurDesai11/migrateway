@@ -44,7 +44,7 @@ public class ReadOptions {
 	@JsonProperty("multiUrl")
 	private String multiUrl;
 	
-	//can be query, header
+	//can be query, header, or link(will have to next link in received object reponse)
 	@JsonProperty("multiReadOptionsLocation")
 	private String multiReadOptionsLocation;
 
