@@ -1,6 +1,6 @@
 # Migrateway
 
-This a unified application based of microservice architecture, that acts both as 
+This a unified backend application based on microservices architecture, that acts both as 
 * A spring boot service which allows for migrating data (using specific data models) between databse services using HTTP protocol
 AND
 * A gateway which redirects requests to individual downstream database serivce from the same domain, without requiring users to independantly interact with each service
