@@ -35,6 +35,6 @@ Updates of the current ongoing migrations are pushed to the frontend using webso
 
 The unified gateway service using yml configuration file allows url masking so that request to individual down-stream services which aren't migration related but rather admin related (like crud operation on the indivdual databases) can be redirected accordingly. This allows thew admin protal to perform individual administrator dutites on individual databases.
 
-Cofigurations also allow protection of database microservices using header besed api token for security.
+Cofigurations also allow protection of database microservices using header based api token for security.
 
-This service cdan be integrated with eureka hytersics dashboard for monitering and itself is a eureka client that can be registered with eureka server similar to down-stream database services.
+This service can be integrated with eureka hytersics dashboard for monitering and itself is a eureka client that can be registered with eureka server similar to down-stream database services.
